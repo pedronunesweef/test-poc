@@ -23,9 +23,10 @@ const App = props => {
   }
 
   useEffect(() => {
-    d3.csv(
-      'https://raw.githubusercontent.com/bumbeishvili/sample-data/main/org.csv'
+    d3.json(
+      'https://gitcdn.link/cdn/pedronunesweef/test-poc/main/src/csvjson.json'
     ).then(data => {
+      console.log(data)
       setData(data);
     });
   }, [true]);
